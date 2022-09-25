@@ -17,3 +17,22 @@ D:\Study\programming\entity framework\workspace\EZECodesList\EZECodesList\obj\De
 D:\Study\programming\entity framework\workspace\EZECodesList\EZECodesList\obj\Debug\EZECodesList.csproj.CopyComplete
 D:\Study\programming\entity framework\workspace\EZECodesList\EZECodesList\obj\Debug\EZECodesList.exe
 D:\Study\programming\entity framework\workspace\EZECodesList\EZECodesList\obj\Debug\EZECodesList.pdb
+D:\Study\programming\Projects\EZECodesList\EZECodesList\bin\Debug\EZECodesList.exe.config
+D:\Study\programming\Projects\EZECodesList\EZECodesList\bin\Debug\EZECodesList.exe
+D:\Study\programming\Projects\EZECodesList\EZECodesList\bin\Debug\EZECodesList.pdb
+D:\Study\programming\Projects\EZECodesList\EZECodesList\bin\Debug\EntityFramework.dll
+D:\Study\programming\Projects\EZECodesList\EZECodesList\bin\Debug\EntityFramework.SqlServer.dll
+D:\Study\programming\Projects\EZECodesList\EZECodesList\bin\Debug\MetroFramework.Design.dll
+D:\Study\programming\Projects\EZECodesList\EZECodesList\bin\Debug\MetroFramework.dll
+D:\Study\programming\Projects\EZECodesList\EZECodesList\bin\Debug\MetroFramework.Fonts.dll
+D:\Study\programming\Projects\EZECodesList\EZECodesList\bin\Debug\EntityFramework.xml
+D:\Study\programming\Projects\EZECodesList\EZECodesList\bin\Debug\EntityFramework.SqlServer.xml
+D:\Study\programming\Projects\EZECodesList\EZECodesList\obj\Debug\EZECodesList.csproj.AssemblyReference.cache
+D:\Study\programming\Projects\EZECodesList\EZECodesList\obj\Debug\EZECodesList.csproj.SuggestedBindingRedirects.cache
+D:\Study\programming\Projects\EZECodesList\EZECodesList\obj\Debug\EZECodesList.CodeTable.resources
+D:\Study\programming\Projects\EZECodesList\EZECodesList\obj\Debug\EZECodesList.Properties.Resources.resources
+D:\Study\programming\Projects\EZECodesList\EZECodesList\obj\Debug\EZECodesList.csproj.GenerateResource.cache
+D:\Study\programming\Projects\EZECodesList\EZECodesList\obj\Debug\EZECodesList.csproj.CoreCompileInputs.cache
+D:\Study\programming\Projects\EZECodesList\EZECodesList\obj\Debug\EZECodesList.csproj.CopyComplete
+D:\Study\programming\Projects\EZECodesList\EZECodesList\obj\Debug\EZECodesList.exe
+D:\Study\programming\Projects\EZECodesList\EZECodesList\obj\Debug\EZECodesList.pdb

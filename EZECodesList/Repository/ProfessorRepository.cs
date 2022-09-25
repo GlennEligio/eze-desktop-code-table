@@ -35,5 +35,10 @@ namespace EZECodesList.Repository
             }
             return prof;
         }
+
+        public List<Professor> getProfessors()
+        {
+            return context.Professors.OrderBy(p => p.Name).ToList();
+        }
     }
 }

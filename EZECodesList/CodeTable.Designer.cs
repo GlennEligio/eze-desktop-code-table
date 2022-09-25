@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.codeGrid = new MetroFramework.Controls.MetroGrid();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
+            this.dtSearch = new MetroFramework.Controls.MetroDateTime();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.cboProf = new MetroFramework.Controls.MetroComboBox();
             this.btnSearchCode = new MetroFramework.Controls.MetroButton();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.btnPollCode = new MetroFramework.Controls.MetroButton();
+            this.timerCodePoll = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.codeGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,6 +85,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.codeGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.codeGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.codeGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.codeGrid.Size = new System.Drawing.Size(387, 363);
             this.codeGrid.TabIndex = 0;
@@ -98,14 +101,14 @@
             this.metroLabel1.TabIndex = 1;
             this.metroLabel1.Text = "Date";
             // 
-            // metroDateTime1
+            // dtSearch
             // 
-            this.metroDateTime1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.metroDateTime1.Location = new System.Drawing.Point(111, 63);
-            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroDateTime1.Name = "metroDateTime1";
-            this.metroDateTime1.Size = new System.Drawing.Size(124, 29);
-            this.metroDateTime1.TabIndex = 2;
+            this.dtSearch.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtSearch.Location = new System.Drawing.Point(111, 63);
+            this.dtSearch.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtSearch.Name = "dtSearch";
+            this.dtSearch.Size = new System.Drawing.Size(124, 29);
+            this.dtSearch.TabIndex = 2;
             // 
             // metroLabel2
             // 
@@ -117,15 +120,15 @@
             this.metroLabel2.TabIndex = 3;
             this.metroLabel2.Text = "Professor";
             // 
-            // metroComboBox1
+            // cboProf
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(111, 107);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(124, 29);
-            this.metroComboBox1.TabIndex = 4;
-            this.metroComboBox1.UseSelectable = true;
+            this.cboProf.FormattingEnabled = true;
+            this.cboProf.ItemHeight = 23;
+            this.cboProf.Location = new System.Drawing.Point(111, 107);
+            this.cboProf.Name = "cboProf";
+            this.cboProf.Size = new System.Drawing.Size(124, 29);
+            this.cboProf.TabIndex = 4;
+            this.cboProf.UseSelectable = true;
             // 
             // btnSearchCode
             // 
@@ -136,27 +139,34 @@
             this.btnSearchCode.TabIndex = 5;
             this.btnSearchCode.Text = "Search Codes";
             this.btnSearchCode.UseSelectable = true;
+            this.btnSearchCode.Click += new System.EventHandler(this.btnSearchCode_Click);
             // 
-            // metroButton1
+            // btnPollCode
             // 
-            this.metroButton1.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.metroButton1.Location = new System.Drawing.Point(277, 111);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(133, 29);
-            this.metroButton1.TabIndex = 6;
-            this.metroButton1.Text = "Poll Today\'s Code";
-            this.metroButton1.UseSelectable = true;
+            this.btnPollCode.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnPollCode.Location = new System.Drawing.Point(277, 111);
+            this.btnPollCode.Name = "btnPollCode";
+            this.btnPollCode.Size = new System.Drawing.Size(133, 29);
+            this.btnPollCode.TabIndex = 6;
+            this.btnPollCode.Text = "Poll Today\'s Code";
+            this.btnPollCode.UseSelectable = true;
+            this.btnPollCode.Click += new System.EventHandler(this.btnPollCode_Click);
+            // 
+            // timerCodePoll
+            // 
+            this.timerCodePoll.Interval = 5000;
+            this.timerCodePoll.Tick += new System.EventHandler(this.timerCodePoll_Tick);
             // 
             // CodeTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(433, 546);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.btnPollCode);
             this.Controls.Add(this.btnSearchCode);
-            this.Controls.Add(this.metroComboBox1);
+            this.Controls.Add(this.cboProf);
             this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroDateTime1);
+            this.Controls.Add(this.dtSearch);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.codeGrid);
             this.Name = "CodeTable";
@@ -172,11 +182,12 @@
 
         private MetroFramework.Controls.MetroGrid codeGrid;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroDateTime metroDateTime1;
+        private MetroFramework.Controls.MetroDateTime dtSearch;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox cboProf;
         private MetroFramework.Controls.MetroButton btnSearchCode;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton btnPollCode;
+        private System.Windows.Forms.Timer timerCodePoll;
     }
 }
 
